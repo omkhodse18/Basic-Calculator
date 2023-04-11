@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="w-[100vw] h-[100vh] flex justify-center items-center bg-[#393E46]">
+        <div class="max-w-[320px] shadow-2xl">
+            
+            <input id="display" type="text" class="outline-none w-full h-[100px] text-[2rem] border-2 border-none border-b-0 rounded-t-xl  p-2 px-3 bg-[#3F72AF]" placeholder="0">
+
+            <!-- <div id='display' class="display outline-none w-full h-[100px] text-[2rem] border-2 border-none border-b-0 rounded-t-xl  p-3 px-3 bg-[#3F72AF]">
+                0
+            </div> -->
+            
+
+            <div class="grid grid-cols-4 text-[1.5rem] gap-3 font-medium border border-black p-5 rounded-b-xl bg-[#02042a] text-white">
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value = '' ">
+                    AC
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <i class="fa-sharp fa-solid fa-delete-left"></i>
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '%' ">
+                    <i class="fa-solid fa-percent"></i>
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '/' ">
+                    <i class="fa-solid fa-divide"></i>
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '7' ">
+                    7
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '8' ">
+                    8
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '9' ">
+                    9
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '*' ">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '4' ">
+                    4
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '5' ">
+                    5
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '6' ">
+                    6
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '-' ">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '1' ">
+                    1
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '2' ">
+                    2
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '3' ">
+                    3
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '+' ">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black" onclick="display.value += '00' ">
+                    00
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black"  onclick="display.value +='0'">
+                    0
+                </button>
+
+                <button class="rounded-full transition-all duration-300 py-3 px-4 hover:bg-[#3F72AF] hover:text-black"  onclick="display.value += '.' ">
+                    .
+                </button>
+
+                <button class="equal_to rounded-full transition-all duration-300 py-3 px-4 bg-orange-400 hover:bg-orange-300 hover:text-black" onclick="display.value = eval(display.value) ">
+                    <i class="fa-solid fa-equals"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+   
+</body>
+</html>
